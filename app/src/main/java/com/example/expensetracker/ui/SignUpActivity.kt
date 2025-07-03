@@ -24,7 +24,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val database = MyDatabase.getInstance(applicationContext)
+        val database = MyDatabase.getDatabase(applicationContext)
         val userRepository = UserRepository(database.userDao())
         val factory = AuthViewModelFactory(userRepository)
         authViewModel = ViewModelProvider(this, factory)[AuthViewModel::class.java]

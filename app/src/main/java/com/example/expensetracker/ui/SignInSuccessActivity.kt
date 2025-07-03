@@ -4,6 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.expensetracker4.databinding.ActivitySignInSuccessBinding
+import com.example.expensetracker4.ui.budget.BudgetFormActivity
+import com.example.expensetracker4.ui.budget.BudgetListActivity
+import com.example.expensetracker4.ui.budget.BudgetListFragment
+
 
 class SignInSuccessActivity : AppCompatActivity() {
 
@@ -22,6 +26,28 @@ class SignInSuccessActivity : AppCompatActivity() {
         // Tampilkan di UI
         binding.tvWelcome.text = "Welcome, $firstName $lastName!"
         binding.tvUsername.text = "Username: $username"
+
+        // Tombol menu navigasi
+//        binding.btnExpenseTrack.setOnClickListener {
+//            val intent = Intent(this, ExpenseTrackActivity::class.java)
+//            startActivity(intent)
+//        }
+
+        binding.btnBudgeting.setOnClickListener {
+            val intent = Intent(this, BudgetListActivity::class.java)
+            startActivity(intent)
+        }
+
+
+//        binding.btnReport.setOnClickListener {
+//            val intent = Intent(this, ReportActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.btnProfile.setOnClickListener {
+//            val intent = Intent(this, ProfileActivity::class.java)
+//            startActivity(intent)
+//        }
 
         // Logout button
         binding.btnLogout.setOnClickListener {

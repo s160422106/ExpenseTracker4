@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center">
+    android:gravity="center_horizontal">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -23,11 +23,50 @@
         android:textSize="18sp"
         android:layout_marginTop="16dp" />
 
-    <!-- Tambahkan tombol Logout -->
+    <!-- Menu Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnExpenseTrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expense Track"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnBudgeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Budgeting"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Logout Button -->
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
         android:layout_marginTop="32dp" />
+
 </LinearLayout>

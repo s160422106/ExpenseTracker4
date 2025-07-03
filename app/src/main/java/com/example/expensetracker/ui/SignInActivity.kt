@@ -41,7 +41,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Inisialisasi ViewModel & Repository
-        val database = MyDatabase.getInstance(applicationContext)
+        val database = MyDatabase.getDatabase(applicationContext)
         userRepository = UserRepository(database.userDao())
         val factory = AuthViewModelFactory(userRepository)
         authViewModel = ViewModelProvider(this, factory)[AuthViewModel::class.java]

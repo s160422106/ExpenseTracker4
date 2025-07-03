@@ -1,25 +1,31 @@
-// com.example.expensetracker4.data.MyDatabase.kt
 package com.example.expensetracker4.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.expensetracker4.data.dao.BudgetDao
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [Budget::class, Expense::class, User::class], version = 2)
 abstract class MyDatabase : RoomDatabase() {
+
+    abstract fun budgetDao(): BudgetDao
+    abstract fun expenseDao(): ExpenseDao
     abstract fun userDao(): UserDao
 
     companion object {
-        @Volatile private var INSTANCE: MyDatabase? = null
+        @Volatile
+        private var INSTANCE: MyDatabase? = null
 
-        fun getInstance(context: Context): MyDatabase {
+        fun getDatabase(context: Context): MyDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     MyDatabase::class.java,
-                    "expense_tracker_db"
-                ).build()
+                    "my_database"
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

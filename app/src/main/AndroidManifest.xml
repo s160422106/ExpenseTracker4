@@ -26,7 +26,8 @@
 
         <activity android:name=".ui.SignUpActivity" />
         <activity android:name=".ui.SignInSuccessActivity" />
-
+        <activity android:name=".ui.budget.BudgetFormActivity" />
+        <activity android:name=".ui.budget.BudgetListActivity" />
 
     </application>
 
