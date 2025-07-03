@@ -28,7 +28,7 @@ class SignInActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("session", MODE_PRIVATE)
         val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
         if (isLoggedIn) {
-            val intent = Intent(this, SignInSuccessActivity::class.java).apply {
+            val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra("username", sharedPref.getString("username", ""))
                 putExtra("firstName", sharedPref.getString("firstName", ""))
                 putExtra("lastName", sharedPref.getString("lastName", ""))
@@ -86,7 +86,7 @@ class SignInActivity : AppCompatActivity() {
                             // Pindah ke halaman sukses
                             val intent = Intent(
                                 this@SignInActivity,
-                                SignInSuccessActivity::class.java
+                                MainActivity::class.java
                             ).apply {
                                 putExtra("username", user.username)
                                 putExtra("firstName", user.firstName)
