@@ -1,4 +1,4 @@
-package com.example.expensetracker.ui
+package com.example.expensetracker4.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,11 +7,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.ViewModelProvider
-import com.example.expensetracker.data.MyDatabase
-import com.example.expensetracker.data.repository.UserRepository
-import com.example.expensetracker.data.viewmodel.AuthViewModel
-import com.example.expensetracker.data.viewmodel.AuthViewModelFactory
-import com.example.expensetracker.databinding.ActivitySignInBinding
+import com.example.expensetracker4.data.MyDatabase
+import com.example.expensetracker4.data.repository.UserRepository
+import com.example.expensetracker4.data.viewmodel.AuthViewModel
+import com.example.expensetracker4.data.viewmodel.AuthViewModelFactory
+import com.example.expensetracker4.databinding.ActivitySignInBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

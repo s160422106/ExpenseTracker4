@@ -1,5 +1,5 @@
-// com.example.expensetracker.data.MyDatabase.kt
-package com.example.expensetracker.data
+// com.example.expensetracker4.data.MyDatabase.kt
+package com.example.expensetracker4.data
 
 import android.content.Context
 import androidx.room.Database

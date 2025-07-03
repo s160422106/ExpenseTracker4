@@ -1,8 +1,8 @@
-package com.example.expensetracker.ui
+package com.example.expensetracker4.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.expensetracker.databinding.ActivitySignInSuccessBinding
+import com.example.expensetracker4.databinding.ActivitySignInSuccessBinding
 
 class SignInSuccessActivity : AppCompatActivity() {
 
