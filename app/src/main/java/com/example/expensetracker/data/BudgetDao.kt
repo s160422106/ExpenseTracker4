@@ -6,9 +6,7 @@ import com.example.expensetracker4.data.Budget
 
 @Dao
 interface BudgetDao {
-
-
-
+    
     @Insert
     suspend fun insertBudget(budget: Budget)
 
